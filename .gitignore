@@ -165,5 +165,4 @@ shell/.gitconfig.local
 /gpg/private.asc
 /.serena
 
-docs/plans/*
-docs/specs/*
+/docs/**/*.md
