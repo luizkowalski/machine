@@ -164,3 +164,6 @@ shell/.gitconfig.local
 /scripts/bulbcontrol
 /gpg/private.asc
 /.serena
+
+docs/plans/*
+docs/specs/*
