@@ -117,6 +117,20 @@ function devx(){
   devcontainer "$1" --workspace-folder . "${@:2}"
 }
 
+function tcode() {
+  local connect=attach-session
+  [[ -n "$TMUX" ]] && connect=switch-client
+
+  if ! tmux has-session -t code 2>/dev/null; then
+    tmux new-session -d -s code -c "$PWD" \; \
+      split-window -h -c "$PWD" \; \
+      split-window -v -c "$PWD" lazygit \; \
+      select-pane -t 0 || return
+  fi
+
+  tmux "$connect" -t code
+}
+
 # function test(){
 #   if [ -e "bin/test" ]; then
 #     bin/test "$@"
