@@ -31,7 +31,7 @@ disabled = true
 read_only = "󰌾 "
 style = "bold cyan"
 truncation_length = 3
-format = '[🗂️ $path]($style)[$read_only]($style) '
+format = '[📁 $path]($style)[$read_only]($style) '
 
 [hostname]
 disabled = true
