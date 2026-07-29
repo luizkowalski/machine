@@ -12,6 +12,7 @@ alias c="cursor ."
 alias cco="code ."
 # alias cat='bat --paging=never' # cat with syntax highlighting
 alias clear_swap="rm -rf ~/.local/state/nvim/swap/*.*"
+alias cls="clear"
 alias dc="docker-compose"
 alias ducks="find . -maxdepth 1 -not -name '.' -print0 | xargs -0 du -ckhs | sort -hr"
 # alias ducks="du -ckhs ./* | sort -hr"
