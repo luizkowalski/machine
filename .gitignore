@@ -165,4 +165,4 @@ shell/.gitconfig.local
 /gpg/private.asc
 /.serena
 
-/docs/**/*.md
+/docs/superpowers/*
