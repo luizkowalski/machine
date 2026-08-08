@@ -15,6 +15,18 @@ mise -E home bootstrap # or: mise -E work bootstrap
 Run `mise -E home bootstrap --update` (or the work equivalent) to update
 managed repositories as well as converge the machine.
 
+### Existing machines
+
+Mise will not take over casks already owned by Homebrew or update dirty managed
+repositories. Clean those repositories and uninstall only the existing casks
+you want mise to own before the first bootstrap. Preview the migration first;
+real files left by the old Stow setup may require the one-time force flag:
+
+```sh
+mise -E home bootstrap --dry-run --force-dotfiles
+mise -E home bootstrap --force-dotfiles
+```
+
 ## Optional setup
 
 SSH keys require an installed and unlocked Bitwarden CLI:
