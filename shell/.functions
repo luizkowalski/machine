@@ -114,7 +114,7 @@ function dev() {
 }
 
 function devx(){
-  devcontainer "$1" --workspace-folder . "${@:2}"
+  npx @devcontainers/cli "$1" --workspace-folder . "${@:2}"
 }
 
 function tcode() {
