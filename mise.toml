@@ -153,3 +153,30 @@ compile = false
 
 [bootstrap.user]
 login_shell = "/bin/zsh"
+
+[bootstrap.repos]
+"~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" = { url = "https://github.com/zsh-users/zsh-autosuggestions" }
+"~/.oh-my-zsh/custom/plugins/zsh-autocomplete" = { url = "https://github.com/marlonrichert/zsh-autocomplete.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" = { url = "https://github.com/zsh-users/zsh-syntax-highlighting.git" }
+"~/.oh-my-zsh/custom/plugins/fzf-tab" = { url = "https://github.com/Aloxaf/fzf-tab" }
+
+[dotfiles]
+"~/.aliases" = "shell/.aliases"
+"~/.functions" = "shell/.functions"
+"~/.gemrc" = "shell/.gemrc"
+"~/.gitconfig" = "shell/.gitconfig"
+"~/.gitignore.global" = "shell/.gitignore.global"
+"~/.yamlfmt" = "shell/.yamlfmt"
+"~/.zshrc" = "shell/.zshrc"
+"~/.config/starship.toml" = "shell/.config/starship.toml"
+"~/.config/topgrade.toml" = "shell/.config/topgrade.toml"
+"~/.config/tmux" = { source = "shell/.config/tmux", mode = "symlink-each" }
+"~/.config/zellij" = { source = "shell/.config/zellij", mode = "symlink-each" }
+"~/.config/nvim" = { source = "nvim/.config/nvim", mode = "symlink-each" }
+"~/.config/ghostty" = { source = "ghostty/.config/ghostty", mode = "symlink-each" }
+"~/.config/lazygit" = { source = "lazygit/.config/lazygit", mode = "symlink-each" }
+"~/.config/opencode" = { source = "opencode/.config/opencode", mode = "symlink-each" }
+"~/.config/atuin" = { source = "atuin/.config/atuin", mode = "symlink-each" }
+"~/.cursor/mcp.json" = "cursor/.cursor/mcp.json"
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "copy" }

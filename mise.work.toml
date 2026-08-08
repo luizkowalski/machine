@@ -1,0 +1,3 @@
+[dotfiles]
+"~/.gitconfig.local" = "shell-work/.gitconfig.local"
+"~/.zshrc.local" = "shell-work/.zshrc.local"
