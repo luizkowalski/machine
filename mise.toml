@@ -183,14 +183,25 @@ login_shell = "/bin/zsh"
 
 [bootstrap.macos.dock]
 autohide = true
+tilesize = 48
+show_recents = false
+mru_spaces = false
 
 [bootstrap.macos.finder]
+show_all_files = true
 show_extensions_warning = false
 show_pathbar = true
 show_status_bar = true
+preferred_view_style = "list"
 
 [bootstrap.macos.keyboard]
+key_repeat = 2
+initial_key_repeat = 15
 press_and_hold = false
+
+[bootstrap.macos.trackpad]
+tap_to_click = true
+three_finger_drag = true
 
 [bootstrap.macos.defaults.NSGlobalDomain]
 CGFontRenderingFontSmoothingDisabled = true
@@ -198,16 +209,15 @@ CGFontRenderingFontSmoothingDisabled = true
 AppleLocale = "en_DE@currency=EUR"
 AppleMeasurementUnits = "Centimeters"
 AppleMetricUnits = true
+NSAutomaticCapitalizationEnabled = false
+NSAutomaticDashSubstitutionEnabled = false
+NSAutomaticQuoteSubstitutionEnabled = false
+NSAutomaticSpellingCorrectionEnabled = false
 NSAutomaticPeriodSubstitutionEnabled = false
-
-[bootstrap.macos.defaults."com.apple.BluetoothAudioAgent"]
-"Apple Bitpool Min (editable)" = 80
-"Apple Bitpool Max (editable)" = 80
-"Apple Initial Bitpool (editable)" = "80"
-"Apple Initial Bitpool Min (editable)" = "80"
-"Negotiated Bitpool" = "80"
-"Negotiated Bitpool Max" = "80"
-"Negotiated Bitpool Min" = "80"
+NSNavPanelExpandedStateForSaveMode = true
+NSNavPanelExpandedStateForSaveMode2 = true
+PMPrintingExpandedStateForPrint = true
+PMPrintingExpandedStateForPrint2 = true
 
 [bootstrap.macos.defaults."com.apple.HIToolbox"]
 AppleFnUsageType = 0
