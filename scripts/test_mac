@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+mock_dir="$(mktemp -d)"
+trap 'rm -rf "$mock_dir"' EXIT
+export COMMAND_LOG="$mock_dir/commands"
+
+for command in defaults killall sudo; do
+  # Write expansions for the mock to evaluate.
+  # shellcheck disable=SC2016
+  printf '#!/bin/sh\nprintf "%%s %%s\\n" "$(basename "$0")" "$*" >> "$COMMAND_LOG"\n' > "$mock_dir/$command"
+  chmod +x "$mock_dir/$command"
+done
+
+# Write expansions for the mock to evaluate.
+# shellcheck disable=SC2016
+printf '%s\n' '#!/bin/sh' 'printf "nvram %s\n" "$*" >> "$COMMAND_LOG"' 'printf "StartupMute\t%s\n" "$NVRAM_VALUE"' > "$mock_dir/nvram"
+chmod +x "$mock_dir/nvram"
+
+PATH="$mock_dir:$PATH" NVRAM_VALUE='%01' scripts/mac
+if rg -q '^sudo ' "$COMMAND_LOG"; then
+  echo "sudo must not run when StartupMute is already %01" >&2
+  exit 1
+fi
+
+: > "$COMMAND_LOG"
+PATH="$mock_dir:$PATH" NVRAM_VALUE='%00' scripts/mac
+
+test "$(rg -c '^sudo nvram StartupMute=%01$' "$COMMAND_LOG")" -eq 1

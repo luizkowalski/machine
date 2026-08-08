@@ -2,34 +2,17 @@
 
 set -euo pipefail
 
-defaults -currentHost write -g AppleFontSmoothing -int 0
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool true
-sudo nvram StartupMute=%01
-defaults write com.apple.finder ShowStatusBar -bool true
-defaults write com.apple.finder ShowPathbar -bool true
-defaults write -g ApplePressAndHoldEnabled -bool false
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 80
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" -int 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+[[ "$(uname -s)" == "Darwin" ]] || exit 0
+
+# mise bootstrap does not support host-scoped defaults.
+if [[ "$(defaults -currentHost read -g AppleFontSmoothing 2>/dev/null || true)" != "0" ]]; then
+  defaults -currentHost write -g AppleFontSmoothing -int 0
+fi
+
+# mise bootstrap defaults support scalar values, not arrays.
 defaults write NSGlobalDomain AppleLanguages -array "en" "pt-BR"
-defaults write NSGlobalDomain AppleLocale -string "en_DE@currency=EUR"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-defaults write com.apple.HIToolbox AppleFnUsageType -int "0"
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true"
-
-# Finder
-defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
-defaults write com.apple.finder "_FXEnableColumnAutoSizing" -bool "true"
-defaults write com.apple.dock "expose-group-apps" -bool "true"
-
-killall Finder
-killall Dock
+# NVRAM is outside the macOS defaults system managed by mise.
+if ! nvram StartupMute 2>/dev/null | grep -q '%01'; then
+  sudo nvram StartupMute=%01
+fi

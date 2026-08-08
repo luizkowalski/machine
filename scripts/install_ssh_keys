@@ -2,15 +2,15 @@
 
 set -e
 
-echo "Syncing vault"
-bw sync
-
-echo "Installing SSH keys from Bitwarden..."
-
 if ! command -v bw >/dev/null 2>&1; then
     echo "Error: Bitwarden CLI (bw) is not installed"
     exit 1
 fi
+
+echo "Syncing vault"
+bw sync
+
+echo "Installing SSH keys from Bitwarden..."
 
 if ! bw status | grep -q '"status":"unlocked"'; then
     echo "Error: Bitwarden is not unlocked. Please run 'bw unlock' first"

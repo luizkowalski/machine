@@ -180,3 +180,52 @@ login_shell = "/bin/zsh"
 "~/.config/atuin" = { source = "atuin/.config/atuin", mode = "symlink-each" }
 "~/.cursor/mcp.json" = "cursor/.cursor/mcp.json"
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "copy" }
+
+[bootstrap.macos.dock]
+autohide = true
+
+[bootstrap.macos.finder]
+show_extensions_warning = false
+show_pathbar = true
+show_status_bar = true
+
+[bootstrap.macos.keyboard]
+press_and_hold = false
+
+[bootstrap.macos.defaults.NSGlobalDomain]
+CGFontRenderingFontSmoothingDisabled = true
+"com.apple.swipescrolldirection" = false
+AppleLocale = "en_DE@currency=EUR"
+AppleMeasurementUnits = "Centimeters"
+AppleMetricUnits = true
+NSAutomaticPeriodSubstitutionEnabled = false
+
+[bootstrap.macos.defaults."com.apple.BluetoothAudioAgent"]
+"Apple Bitpool Min (editable)" = 80
+"Apple Bitpool Max (editable)" = 80
+"Apple Initial Bitpool (editable)" = "80"
+"Apple Initial Bitpool Min (editable)" = "80"
+"Negotiated Bitpool" = "80"
+"Negotiated Bitpool Max" = "80"
+"Negotiated Bitpool Min" = "80"
+
+[bootstrap.macos.defaults."com.apple.HIToolbox"]
+AppleFnUsageType = 0
+
+[bootstrap.macos.defaults."com.apple.TimeMachine"]
+DoNotOfferNewDisksForBackup = true
+
+[bootstrap.macos.defaults."com.apple.finder"]
+_FXEnableColumnAutoSizing = true
+
+[bootstrap.macos.defaults."com.apple.dock"]
+expose-group-apps = true
+
+[tasks.bootstrap]
+run = "scripts/mac"
+
+[tasks.ssh]
+run = "scripts/install_ssh_keys"
+
+[tasks.bulb]
+run = "scripts/build_bulb.sh"
