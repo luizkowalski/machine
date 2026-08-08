@@ -13,6 +13,4 @@ fi
 defaults write NSGlobalDomain AppleLanguages -array "en" "pt-BR"
 
 # NVRAM is outside the macOS defaults system managed by mise.
-if ! nvram StartupMute 2>/dev/null | grep -q '%01'; then
-  sudo nvram StartupMute=%01
-fi
+sudo nvram StartupMute=%01
