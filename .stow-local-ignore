@@ -1,7 +1,0 @@
-scripts
-\.vscode
-Brewfile
-Makefile
-README\.md
-typos\.toml
-.gitignore
