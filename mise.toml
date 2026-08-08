@@ -162,23 +162,23 @@ login_shell = "/bin/zsh"
 "~/.oh-my-zsh/custom/plugins/fzf-tab" = { url = "https://github.com/Aloxaf/fzf-tab" }
 
 [dotfiles]
-"~/.aliases" = "shell/.aliases"
-"~/.functions" = "shell/.functions"
-"~/.gemrc" = "shell/.gemrc"
-"~/.gitconfig" = "shell/.gitconfig"
-"~/.gitignore.global" = "shell/.gitignore.global"
-"~/.yamlfmt" = "shell/.yamlfmt"
-"~/.zshrc" = "shell/.zshrc"
-"~/.config/starship.toml" = "shell/.config/starship.toml"
-"~/.config/topgrade.toml" = "shell/.config/topgrade.toml"
-"~/.config/tmux" = { source = "shell/.config/tmux", mode = "symlink-each" }
-"~/.config/zellij" = { source = "shell/.config/zellij", mode = "symlink-each" }
-"~/.config/nvim" = { source = "shell/.config/nvim", mode = "symlink-each" }
-"~/.config/ghostty" = { source = "shell/.config/ghostty", mode = "symlink-each" }
-"~/.config/lazygit" = { source = "shell/.config/lazygit", mode = "symlink-each" }
-"~/.config/opencode" = { source = "shell/.config/opencode", mode = "symlink-each" }
-"~/.config/atuin" = { source = "shell/.config/atuin", mode = "symlink-each" }
-"~/.cursor/mcp.json" = "shell/.cursor/mcp.json"
+"~/.aliases" = "dotfiles/zsh/aliases"
+"~/.functions" = "dotfiles/zsh/functions"
+"~/.gemrc" = "dotfiles/ruby/gemrc"
+"~/.gitconfig" = "dotfiles/git/config"
+"~/.gitignore.global" = "dotfiles/git/ignore"
+"~/.yamlfmt" = "dotfiles/yaml/yamlfmt"
+"~/.zshrc" = "dotfiles/zsh/zshrc"
+"~/.config/starship.toml" = "dotfiles/starship/config.toml"
+"~/.config/topgrade.toml" = "dotfiles/topgrade/config.toml"
+"~/.config/tmux" = { source = "dotfiles/tmux", mode = "symlink-each" }
+"~/.config/zellij" = { source = "dotfiles/zellij", mode = "symlink-each" }
+"~/.config/nvim" = { source = "dotfiles/nvim", mode = "symlink-each" }
+"~/.config/ghostty" = { source = "dotfiles/ghostty", mode = "symlink-each" }
+"~/.config/lazygit" = { source = "dotfiles/lazygit", mode = "symlink-each" }
+"~/.config/opencode/opencode.json" = "dotfiles/opencode/config.json"
+"~/.config/atuin" = { source = "dotfiles/atuin", mode = "symlink-each" }
+"~/.cursor/mcp.json" = "dotfiles/cursor/mcp.json"
 "~/.config/mise/config.toml" = { source = "mise.toml", mode = "copy" }
 
 [bootstrap.macos.dock]

@@ -158,9 +158,6 @@ build-iPhoneSimulator/
 
 scripts/bulb
 
-/shell/.secrets
-shell/.zshrc.local
-shell/.gitconfig.local
 /scripts/bulbcontrol
 /gpg/private.asc
 /.serena
