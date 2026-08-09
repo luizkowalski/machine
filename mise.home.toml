@@ -1,0 +1,3 @@
+[dotfiles]
+"~/.gitconfig.local" = "dotfiles/profiles/home/gitconfig"
+"~/.zshrc.local" = "dotfiles/profiles/home/zshrc"

@@ -1,0 +1,4 @@
+export BULB_HOST="192.168.178.112"
+export BULB_PORT="38899"
+export HOMEBREW_NO_ASK=1
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/18/bin"

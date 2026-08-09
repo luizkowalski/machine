@@ -1,0 +1,8 @@
+export AWS_DEFAULT_SSO_REGION="us-east-1"
+export AWS_DEFAULT_SSO_START_URL="https://d-90675f4aae.awsapps.com/start"
+export AWS_PROFILE="shared_production"
+export BULB_HOST="192.168.178.112"
+export BULB_PORT="38899"
+export DD_SITE="datadoghq.eu"
+export KUBECONFIG="$HOME/.kube/cf-auth-okta.yaml:$HOME/.kube/cf-staging.yaml:$HOME/.kube/cf-preview.yaml:$HOME/.kube/cf-tools.yaml:$HOME/.kube/cf-production.yaml:$HOME/.kube/cf-convenience.yaml"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/18/bin"

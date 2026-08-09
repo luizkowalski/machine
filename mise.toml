@@ -1,0 +1,241 @@
+[tools]
+bun = "latest"
+go = "latest"
+node = "24"
+python = "3.14"
+ruby = "latest"
+rust = "latest"
+terraform = "latest"
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = ["ruby", "bun"]
+
+[settings.ruby]
+compile = false
+
+[settings.python]
+compile = false
+
+[bootstrap.brew.taps]
+"anomalyco/tap" = "https://github.com/anomalyco/homebrew-tap.git"
+"cesarferreira/tap" = "https://github.com/cesarferreira/homebrew-tap.git"
+"fairwindsops/tap" = "https://github.com/fairwindsops/homebrew-tap.git"
+"puma/puma" = "https://github.com/puma/homebrew-puma.git"
+"qmk/qmk" = "https://github.com/qmk/homebrew-qmk.git"
+"rtk-ai/tap" = "https://github.com/rtk-ai/homebrew-tap.git"
+"stripe/stripe-cli" = "https://github.com/stripe/homebrew-stripe-cli.git"
+"vitobotta/tap" = "https://github.com/vitobotta/homebrew-tap.git"
+
+[bootstrap.packages]
+"brew:act" = "latest"
+"brew:xz" = "latest"
+"brew:atuin" = "latest"
+"brew:autoconf" = "latest"
+"brew:autoconf-archive" = "latest"
+"brew:automake" = "latest"
+"brew:bat" = "latest"
+"brew:bc" = "latest"
+"brew:readline" = "latest"
+"brew:bind" = "latest"
+"brew:bison" = "latest"
+"brew:btop" = "latest"
+"brew:ccache" = "latest"
+"brew:cloudflared" = "latest"
+"brew:cmake" = "latest"
+"brew:container" = "latest"
+"brew:coreutils" = "latest"
+"brew:difftastic" = "latest"
+"brew:dua-cli" = "latest"
+"brew:ffmpeg" = "latest"
+"brew:flyctl" = "latest"
+"brew:fzf" = "latest"
+"brew:gdbm" = "latest"
+"brew:gh" = "latest"
+"brew:git" = "latest"
+"brew:hadolint" = "latest"
+"brew:helm" = "latest"
+"brew:imagemagick" = "latest"
+"brew:irssi" = "latest"
+"brew:jq" = "latest"
+"brew:k6" = "latest"
+"brew:k9s" = "latest"
+"brew:lazygit" = "latest"
+"brew:libffi" = "latest"
+"brew:libvirt" = "latest"
+"brew:libxml2" = "latest"
+"brew:libyaml" = "latest"
+"brew:llvm@19" = "latest"
+"brew:ls-lint" = "latest"
+"brew:lua-language-server" = "latest"
+"brew:mas" = "latest"
+"brew:mcfly" = "latest"
+"brew:minikube" = "latest"
+"brew:mysql@8.4" = "latest"
+"brew:nasm" = "latest"
+"brew:neovim" = "latest"
+"brew:sqlite" = "latest"
+"brew:netshow" = "latest"
+"brew:ninja" = "latest"
+"brew:nmap" = "latest"
+"brew:oha" = "latest"
+"brew:openssl@3.5" = "latest"
+"brew:tmux" = "latest"
+"brew:overmind" = "latest"
+"brew:pkgconf" = "latest"
+"brew:qemu" = "latest"
+"brew:qt" = "latest"
+"brew:ripgrep" = "latest"
+"brew:shellcheck" = "latest"
+"brew:shellharden" = "latest"
+"brew:spotify_player" = "latest"
+"brew:sqruff" = "latest"
+"brew:sshpass" = "latest"
+"brew:starship" = "latest"
+"brew:stylua" = "latest"
+"brew:tailscale" = "latest"
+"brew:taplo" = "latest"
+"brew:television" = "latest"
+"brew:tidy-html5" = "latest"
+"brew:topgrade" = "latest"
+"brew:tree" = "latest"
+"brew:tree-sitter" = "latest"
+"brew:typos-cli" = "latest"
+"brew:typos-lsp" = "latest"
+"brew:valkey" = "latest"
+"brew:watchman" = "latest"
+"brew:wb32-dfu-updater_cli" = "latest"
+"brew:wget" = "latest"
+"brew:witr" = "latest"
+"brew:yamlfmt" = "latest"
+"brew:yamllint" = "latest"
+"brew:yazi" = "latest"
+"brew:yq" = "latest"
+"brew:zellij" = "latest"
+"brew:anomalyco/tap/opencode" = "latest"
+"brew:cesarferreira/tap/rip" = "latest"
+"brew:fairwindsops/tap/nova" = "latest"
+"brew:puma/puma/puma-dev" = "latest"
+"brew:qmk/qmk/qmk" = "latest"
+"brew:rtk-ai/tap/rtk" = "latest"
+"brew:stripe/stripe-cli/stripe" = "latest"
+"brew:mole" = "latest"
+"brew:vitobotta/tap/hetzner_k3s" = "latest"
+# "brew-cask:airbuddy" = "latest"
+# "brew-cask:balenaetcher" = "latest"
+# "brew-cask:betterdisplay" = "latest"
+# "brew-cask:claude" = "latest"
+# "brew-cask:elgato-stream-deck" = "latest"
+# "brew-cask:font-cascadia-code-nf" = "latest"
+# "brew-cask:font-caskaydia-cove-nerd-font" = "latest"
+# "brew-cask:font-caskaydia-mono-nerd-font" = "latest"
+# "brew-cask:font-fira-code-nerd-font" = "latest"
+# "brew-cask:font-manufacturing-consent" = "latest"
+# "brew-cask:font-maple-mono-nf" = "latest"
+# "brew-cask:font-maple-mono-normal-nf" = "latest"
+# "brew-cask:gpg-suite" = "latest"
+# "brew-cask:hot" = "latest"
+# "brew-cask:imageoptim" = "latest"
+# "brew-cask:launchos" = "latest"
+# "brew-cask:mac-mouse-fix" = "latest"
+# "brew-cask:nvidia-geforce-now" = "latest"
+# "brew-cask:omnidisksweeper" = "latest"
+# "brew-cask:qmk-toolbox" = "latest"
+# "brew-cask:the-unarchiver" = "latest"
+# "brew-cask:via" = "latest"
+# "brew-cask:vlc" = "latest"
+"mas:1019371109" = "latest"
+"mas:1470584107" = "latest"
+"mas:1381004916" = "latest"
+"mas:6758070650" = "latest"
+"mas:1475387142" = "latest"
+"mas:425424353" = "latest"
+
+[bootstrap.user]
+login_shell = "/bin/zsh"
+
+[bootstrap.repos]
+"~/.oh-my-zsh" = { url = "https://github.com/ohmyzsh/ohmyzsh.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" = { url = "https://github.com/zsh-users/zsh-autosuggestions" }
+"~/.oh-my-zsh/custom/plugins/zsh-autocomplete" = { url = "https://github.com/marlonrichert/zsh-autocomplete.git" }
+"~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" = { url = "https://github.com/zsh-users/zsh-syntax-highlighting.git" }
+"~/.oh-my-zsh/custom/plugins/fzf-tab" = { url = "https://github.com/Aloxaf/fzf-tab" }
+
+[dotfiles]
+"~/.aliases" = "dotfiles/zsh/aliases"
+"~/.functions" = "dotfiles/zsh/functions"
+"~/.gemrc" = "dotfiles/ruby/gemrc"
+"~/.gitconfig" = "dotfiles/git/config"
+"~/.gitignore.global" = "dotfiles/git/ignore"
+"~/.yamlfmt" = "dotfiles/yaml/yamlfmt"
+"~/.zshrc" = "dotfiles/zsh/zshrc"
+"~/.config/starship.toml" = "dotfiles/starship/config.toml"
+"~/.config/topgrade.toml" = "dotfiles/topgrade/config.toml"
+"~/.config/tmux" = { source = "dotfiles/tmux", mode = "symlink-each" }
+"~/.config/zellij" = { source = "dotfiles/zellij", mode = "symlink-each" }
+"~/.config/nvim" = { source = "dotfiles/nvim", mode = "symlink-each" }
+"~/.config/ghostty" = { source = "dotfiles/ghostty", mode = "symlink-each" }
+"~/.config/lazygit" = { source = "dotfiles/lazygit", mode = "symlink-each" }
+"~/.config/opencode/opencode.json" = "dotfiles/opencode/config.json"
+"~/.config/atuin" = { source = "dotfiles/atuin", mode = "symlink-each" }
+"~/.cursor/mcp.json" = "dotfiles/cursor/mcp.json"
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "copy" }
+
+[bootstrap.macos.dock]
+autohide = true
+tilesize = 48
+show_recents = false
+mru_spaces = false
+
+[bootstrap.macos.finder]
+show_all_files = true
+show_extensions_warning = false
+show_pathbar = true
+show_status_bar = true
+preferred_view_style = "list"
+
+[bootstrap.macos.keyboard]
+key_repeat = 2
+initial_key_repeat = 15
+press_and_hold = false
+
+[bootstrap.macos.trackpad]
+tap_to_click = true
+three_finger_drag = true
+
+[bootstrap.macos.defaults.NSGlobalDomain]
+CGFontRenderingFontSmoothingDisabled = true
+"com.apple.swipescrolldirection" = false
+AppleLocale = "en_DE@currency=EUR"
+AppleMeasurementUnits = "Centimeters"
+AppleMetricUnits = true
+NSAutomaticCapitalizationEnabled = false
+NSAutomaticDashSubstitutionEnabled = false
+NSAutomaticQuoteSubstitutionEnabled = false
+NSAutomaticSpellingCorrectionEnabled = false
+NSAutomaticPeriodSubstitutionEnabled = false
+NSNavPanelExpandedStateForSaveMode = true
+NSNavPanelExpandedStateForSaveMode2 = true
+PMPrintingExpandedStateForPrint = true
+PMPrintingExpandedStateForPrint2 = true
+
+[bootstrap.macos.defaults."com.apple.HIToolbox"]
+AppleFnUsageType = 0
+
+[bootstrap.macos.defaults."com.apple.TimeMachine"]
+DoNotOfferNewDisksForBackup = true
+
+[bootstrap.macos.defaults."com.apple.finder"]
+_FXEnableColumnAutoSizing = true
+
+[bootstrap.macos.defaults."com.apple.dock"]
+expose-group-apps = true
+
+[tasks.bootstrap]
+run = "scripts/mac"
+
+[tasks.ssh]
+run = "scripts/install_ssh_keys"
+
+[tasks.bulb]
+run = "scripts/build_bulb.sh"
