@@ -163,3 +163,5 @@ scripts/bulb
 /.serena
 
 /docs/superpowers/*
+
+/shell/.secrets
