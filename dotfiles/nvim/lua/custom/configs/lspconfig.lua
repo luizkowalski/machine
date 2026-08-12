@@ -9,6 +9,7 @@ local servers = {
   "jsonls",
   "stimulus_ls",
   "terraformls",
+  "texlab",
   "turbo_ls",
   "taplo",
   "yamlls",

@@ -139,6 +139,7 @@ local plugins = {
         "lua_ls",
         "ruby_lsp",
         "terraformls",
+        "texlab",
         "typos_lsp",
       },
     },
