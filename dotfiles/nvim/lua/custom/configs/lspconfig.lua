@@ -42,8 +42,6 @@ vim.lsp.config('typos_lsp', {
 })
 vim.lsp.enable('typos_lsp')
 
-vim.lsp.enable('terraformls')
-vim.lsp.enable('dockerls')
 -- lspconfig.yamlls.setup {
 --   on_attach = on_attach,
 --   capabilities = {
@@ -65,7 +63,6 @@ vim.lsp.enable('dockerls')
 --     }
 --   }
 -- }
-vim.lsp.enable('lua_ls')
 vim.lsp.enable('bashls')
 
 vim.lsp.config('ruby_lsp', {

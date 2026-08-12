@@ -165,3 +165,4 @@ scripts/bulb
 /docs/superpowers/*
 
 /shell/.secrets
+/.claude

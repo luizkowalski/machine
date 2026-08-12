@@ -2,6 +2,9 @@ local plugins = {
   {
     "echasnovski/mini.trailspace",
     version = false,
+    config = function()
+      require("mini.trailspace").setup()
+    end,
   },
   -- {
   --   import = "nvchad.blink.lazyspec",
@@ -14,10 +17,6 @@ local plugins = {
   },
   {
     "sindrets/diffview.nvim",
-    lazy = false,
-  },
-  {
-    "prabirshrestha/tv.vim",
     lazy = false,
   },
   {
@@ -52,17 +51,21 @@ local plugins = {
     dependencies = { "nvim-treesitter/nvim-treesitter-context" },
     opts = {
       ensure_installed = {
+        "bash",
         "c",
         "css",
+        "dockerfile",
         "embedded_template",
         "html",
         "javascript",
         "json",
+        "latex",
         "lua",
         "markdown",
         "ruby",
         "sql",
         "terraform",
+        "toml",
         "typescript",
         "vim",
         "yaml",
@@ -135,12 +138,20 @@ local plugins = {
     "mason-org/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
+        "bashls",
+        "cssls",
+        "docker_compose_language_service",
         "dockerls",
+        "html",
+        "jsonls",
         "lua_ls",
         "ruby_lsp",
+        "taplo",
         "terraformls",
         "texlab",
+        "turbo_ls",
         "typos_lsp",
+        "yamlls",
       },
     },
   },
