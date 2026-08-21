@@ -16,6 +16,11 @@ local plugins = {
     priority = 1000,
   },
   {
+    "nvim-mini/mini.pairs",
+    lazy = false,
+    version = "*",
+  },
+  {
     "sindrets/diffview.nvim",
     lazy = false,
   },
@@ -149,7 +154,6 @@ local plugins = {
         "taplo",
         "terraformls",
         "texlab",
-        "turbo_ls",
         "typos_lsp",
         "yamlls",
       },
