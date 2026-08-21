@@ -10,7 +10,6 @@ local servers = {
   "stimulus_ls",
   "terraformls",
   "texlab",
-  "turbo_ls",
   "taplo",
   "yamlls",
 }
@@ -26,7 +25,7 @@ for _, lsp in ipairs(servers) do
   vim.lsp.enable(lsp)
 end
 
-vim.lsp.config('typos_lsp', {
+vim.lsp.config("typos_lsp", {
   config = {
     -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
     cmd_env = { RUST_LOG = "error" },
@@ -40,7 +39,7 @@ vim.lsp.config('typos_lsp', {
     diagnosticSeverity = "Error",
   },
 })
-vim.lsp.enable('typos_lsp')
+vim.lsp.enable("typos_lsp")
 
 -- lspconfig.yamlls.setup {
 --   on_attach = on_attach,
@@ -63,19 +62,19 @@ vim.lsp.enable('typos_lsp')
 --     }
 --   }
 -- }
-vim.lsp.enable('bashls')
+vim.lsp.enable("bashls")
 
-vim.lsp.config('ruby_lsp', {
+vim.lsp.config("ruby_lsp", {
   cmd = { "ruby-lsp" }, -- Use globally installed ruby-lsp gem
   init_options = {
     formatter = "auto",
     linters = { "rubocop" },
   },
 })
-vim.lsp.enable('ruby_lsp')
+vim.lsp.enable("ruby_lsp")
 
 -- })
-vim.lsp.config('tailwindcss', {
+vim.lsp.config("tailwindcss", {
   cmd = { "./node_modules/.bin/tailwindcss-language-server", "--stdio" },
   on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
@@ -94,4 +93,4 @@ vim.lsp.config('tailwindcss', {
     -- "svelte",
   },
 })
-vim.lsp.enable('tailwindcss')
+vim.lsp.enable("tailwindcss")
