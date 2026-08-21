@@ -161,6 +161,10 @@ function karm() {
   kamal accessory remove "$1" -y
 }
 
+function strit() {
+  uv tool run --from openai-whisper whisper "$1" --language "$2" --model medium --output_format srt
+}
+
 # # Merges a video with a subtitle file and encodes it to a new file.
 # # Usage: encode_video video.mkv subtitle.srt
 # function encode_video(){
