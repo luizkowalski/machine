@@ -12,7 +12,9 @@ cursor-style-blink = true
 copy-on-select = clipboard
 
 # font-family = "CaskaydiaCove NFM Light"
-font-family = "CaskaydiaMono NFM ExtraLight"
+# font-family = "CaskaydiaMono NFM ExtraLight"
+font-family = Ioskeley Mono Term Light
+font-size = 14
 
 # font-feature = "cv33"
 # font-feature = "cv34"
@@ -31,7 +33,6 @@ font-family = "CaskaydiaMono NFM ExtraLight"
 # font-feature = "ss20"
 # font-feature = "calt"
 
-font-size = 13
 font-variation = "wght=100"
 
 scrollback-limit = 2000000000000000
