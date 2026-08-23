@@ -181,7 +181,9 @@ login_shell = "/bin/zsh"
 "~/.config/opencode/opencode.json" = "dotfiles/opencode/config.json"
 "~/.config/atuin" = { source = "dotfiles/atuin", mode = "symlink-each" }
 "~/.cursor/mcp.json" = "dotfiles/cursor/mcp.json"
-"~/.config/mise/config.toml" = { source = "mise.toml", mode = "copy" }
+"~/.config/mise/config.toml" = { source = "mise.toml", mode = "symlink" }
+"~/.claude/CLAUDE.md" = { source = "agents/agents.md", mode = "symlink" }
+"~/.codex/AGENTS.md" = { source = "agents/agents.md", mode = "symlink" }
 
 [bootstrap.macos.dock]
 autohide = true
