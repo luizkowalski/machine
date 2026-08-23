@@ -88,5 +88,5 @@ tags
 .ionide
 
 mise.local.toml
-
+.serena/
 # End of https://www.toptal.com/developers/gitignore/api/macos,vim,visualstudiocode,linux
