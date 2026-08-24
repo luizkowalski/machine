@@ -163,6 +163,8 @@ fi
 # eval "$(/opt/homebrew/bin/mise activate zsh)"
 eval "$(mise activate zsh --shims)" # should be first
 # eval "$(mise activate zsh)"
+# mise's bundled zsh completion is broken (dynamic args fall back to files); use usage-generated one
+eval "$(usage g completion zsh mise --usage-cmd 'mise usage')"
 
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
