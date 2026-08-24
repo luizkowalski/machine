@@ -1,0 +1,18 @@
+[tools]
+bun = "latest"
+go = "latest"
+node = "24"
+python = "3.14"
+ruby = "latest"
+rust = "latest"
+terraform = "latest"
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = ["ruby", "bun"]
+
+[settings.ruby]
+compile = false
+
+[settings.python]
+compile = false
