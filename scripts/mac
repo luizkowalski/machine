@@ -5,9 +5,6 @@ set -euo pipefail
 [[ "$(uname -s)" == "Darwin" ]] || exit 0
 
 # mise bootstrap does not support host-scoped defaults.
-if [[ "$(defaults -currentHost read -g AppleFontSmoothing 2>/dev/null || true)" != "0" ]]; then
-  defaults -currentHost write -g AppleFontSmoothing -int 0
-fi
 defaults -currentHost write -g com.apple.mouse.tapBehavior -int 0
 
 # mise bootstrap defaults support scalar values, not arrays.
