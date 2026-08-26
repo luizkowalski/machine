@@ -85,6 +85,7 @@
 "brew:tree-sitter" = "latest"
 "brew:typos-cli" = "latest"
 "brew:typos-lsp" = "latest"
+"brew:usage" = "latest"
 "brew:valkey" = "latest"
 "brew:watchman" = "latest"
 "brew:wb32-dfu-updater_cli" = "latest"
