@@ -5,3 +5,4 @@
 * Stick to YAGNI mentality
 * Make decisions for the long term, enabling an architecture that can evolve, do not accept a stopgap  that only works for now
 * When deleting code, leave no vestigial traces, whale legs, or references to the old implementation.
+* NEVER reply to GitHub comments unless explicitly told to do so

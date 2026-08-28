@@ -1,6 +1,7 @@
 [tools]
 bun = "latest"
 go = "latest"
+node = "24.17.0"
 # node = "24"
 python = "3.14"
 ruby = "latest"
