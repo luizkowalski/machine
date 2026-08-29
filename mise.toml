@@ -192,6 +192,7 @@ three_finger_drag = true
 
 [bootstrap.macos.defaults.NSGlobalDomain]
 "com.apple.swipescrolldirection" = false
+AppleFontSmoothing = 0
 AppleLocale = "en_DE@currency=EUR"
 AppleMeasurementUnits = "Centimeters"
 AppleMetricUnits = true
@@ -225,3 +226,9 @@ run = "scripts/install_ssh_keys"
 
 [tasks.bulb]
 run = "scripts/build_bulb.sh"
+
+[tasks.home]
+run = "mise --env home bootstrap --force-dotfiles"
+
+[tasks.work]
+run = "mise --env work bootstrap --force-dotfiles"
