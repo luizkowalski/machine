@@ -1,74 +1,35 @@
 adjust-cell-height = 1
 
 auto-update-channel = tip
-
 auto-update = download
 
-clipboard-paste-protection = false
+clipboard-paste-protection = true
 
 cursor-style = bar
-cursor-style-blink = true
+cursor-style-blink = false
 
 copy-on-select = clipboard
 
-# font-family = "CaskaydiaCove NFM Light"
-# font-family = "CaskaydiaMono NFM ExtraLight"
-# font-family = Ioskeley Mono Term Light
-font-family = Cascadia Code NF Regular Light
+font-family = Cascadia Code NF
+font-style = Light
 font-size = 14
 
-# font-feature = "cv33"
-# font-feature = "cv34"
-# font-feature = "cv35"
-# font-feature = "cv36"
-# font-feature = "cv61"
-# font-feature = "cv62"
-# font-feature = "ss05"
-# font-feature = "ss06"
-# font-feature = "ss07"
-# font-feature = "ss08"
-# font-feature = "ss01"
-# font-feature = "ss02"
-# font-feature = "ss03"
-# font-feature = "ss19"
-# font-feature = "ss20"
-# font-feature = "calt"
-
-font-variation = "wght=100"
-
-scrollback-limit = 2000000000000000
-
-#macos-icon = custom-style
-#macos-icon-ghost-color = #ddd
-#macos-icon-screen-color = #000
-#macos-icon-frame = chrome
+scrollback-limit-bytes = 500000000
 
 macos-titlebar-style = transparent
 macos-option-as-alt = true
 
-background-blur-radius = 20
-# background-blur = macos-glass-clear
+background-opacity = 0.99
+background-blur = macos-glass-regular
 
 mouse-hide-while-typing = true
 
-# theme = Material Ocean
-# theme = Snazzy
-theme = TokyoNight Night
-# theme = Apple System Colors
-# theme = Aura Dark
-# theme = MaterialOcean
-# theme = solarized-osaka-night
-# theme = Sublette
-# theme = Kanagawa Wave
-# theme = Kanagawabones
-# theme = tokyonight-storm
+theme = light:TokyoNight Day,dark:TokyoNight Night
 
-window-decoration = true
-window-width      = 145
-window-height     = 45
-window-theme      = dark
+window-decoration = auto
+window-width = 145
+window-height = 45
+window-theme = auto
 
-# working-directory = /Users/luiz/Projects/switchboard
-# working-directory = /Users/luiz.kowalski/Projects
 working-directory = ~/Projects
 keybind = shift+enter=text:\n
