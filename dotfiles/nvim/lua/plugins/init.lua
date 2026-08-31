@@ -218,6 +218,14 @@ local plugins = {
     end,
   },
   {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        file_ignore_patterns = { "node_modules", "sorbet" },
+      },
+    },
+  },
+  {
     "numToStr/Comment.nvim",
     lazy = false,
     config = function()
@@ -225,12 +233,5 @@ local plugins = {
     end,
   },
 }
-
--- Not needed if installed Ripgrep, it picks up the config from .gitignore
-require("telescope").setup({
-  defaults = {
-    file_ignore_patterns = { "node_modules", "sorbet" },
-  },
-})
 
 return plugins

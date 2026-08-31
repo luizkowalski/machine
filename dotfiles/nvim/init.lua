@@ -42,10 +42,12 @@ vim.schedule(function()
   require("mappings")
 end)
 
--- Auto-open nvim-tree if it's available
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     vim.cmd("NvimTreeFocus")
+    if vim.fn.argc() > 0 then
+      vim.cmd("wincmd p")
+    end
   end,
-  desc = "Open nvim-tree if it's available",
+  desc = "Open nvim-tree, keeping focus on the opened file",
 })
