@@ -49,6 +49,7 @@ end, { desc = "Close current buffer" })
 map("v", "<A-Up>", ":m '<-2<CR>gv=gv", { desc = "Move block up" })
 map("v", "<A-Down>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 map("v", "<C-/>", "gc", { desc = "Comment selection" })
+map("v", "<leader>s", ":sort<CR>", { desc = "Sort selected lines" })
 
 -- Insert mode mappings
 map("i", "<C-BS>", "<C-w>", { desc = "Delete previous word" })

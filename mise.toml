@@ -10,24 +10,25 @@
 
 [bootstrap.packages]
 "brew:act" = "latest"
-"brew:xz" = "latest"
+"brew:anomalyco/tap/opencode" = "latest"
 "brew:atuin" = "latest"
 "brew:autoconf" = "latest"
 "brew:autoconf-archive" = "latest"
 "brew:automake" = "latest"
 "brew:bat" = "latest"
 "brew:bc" = "latest"
-"brew:readline" = "latest"
 "brew:bind" = "latest"
 "brew:bison" = "latest"
 "brew:btop" = "latest"
 "brew:ccache" = "latest"
+"brew:cesarferreira/tap/rip" = "latest"
 "brew:cloudflared" = "latest"
 "brew:cmake" = "latest"
 "brew:container" = "latest"
 "brew:coreutils" = "latest"
 "brew:difftastic" = "latest"
 "brew:dua-cli" = "latest"
+"brew:fairwindsops/tap/nova" = "latest"
 "brew:ffmpeg" = "latest"
 "brew:flyctl" = "latest"
 "brew:fzf" = "latest"
@@ -53,33 +54,39 @@
 "brew:mas" = "latest"
 "brew:mcfly" = "latest"
 "brew:minikube" = "latest"
+"brew:mole" = "latest"
 "brew:mysql@8.4" = "latest"
 "brew:nasm" = "latest"
 "brew:neovim" = "latest"
-"brew:sqlite" = "latest"
 "brew:netshow" = "latest"
 "brew:ninja" = "latest"
 "brew:nmap" = "latest"
 "brew:oha" = "latest"
 "brew:openssl@3.5" = "latest"
-"brew:tmux" = "latest"
 "brew:overmind" = "latest"
 "brew:pkgconf" = "latest"
+"brew:puma/puma/puma-dev" = "latest"
 "brew:qemu" = "latest"
+"brew:qmk/qmk/qmk" = "latest"
 "brew:qt" = "latest"
+"brew:readline" = "latest"
 "brew:ripgrep" = "latest"
+"brew:rtk-ai/tap/rtk" = "latest"
 "brew:shellcheck" = "latest"
 "brew:shellharden" = "latest"
 "brew:spotify_player" = "latest"
+"brew:sqlite" = "latest"
 "brew:sqruff" = "latest"
 "brew:sshpass" = "latest"
 "brew:starship" = "latest"
+"brew:stripe/stripe-cli/stripe" = "latest"
 "brew:stylua" = "latest"
 "brew:tailscale" = "latest"
 "brew:taplo" = "latest"
-"brew:television" = "latest"
 "brew:tectonic" = "latest"
+"brew:television" = "latest"
 "brew:tidy-html5" = "latest"
+"brew:tmux" = "latest"
 "brew:topgrade" = "latest"
 "brew:tree" = "latest"
 "brew:tree-sitter" = "latest"
@@ -87,24 +94,17 @@
 "brew:typos-lsp" = "latest"
 "brew:usage" = "latest"
 "brew:valkey" = "latest"
+"brew:vitobotta/tap/hetzner_k3s" = "latest"
 "brew:watchman" = "latest"
 "brew:wb32-dfu-updater_cli" = "latest"
 "brew:wget" = "latest"
 "brew:witr" = "latest"
+"brew:xz" = "latest"
 "brew:yamlfmt" = "latest"
 "brew:yamllint" = "latest"
 "brew:yazi" = "latest"
 "brew:yq" = "latest"
 "brew:zellij" = "latest"
-"brew:anomalyco/tap/opencode" = "latest"
-"brew:cesarferreira/tap/rip" = "latest"
-"brew:fairwindsops/tap/nova" = "latest"
-"brew:puma/puma/puma-dev" = "latest"
-"brew:qmk/qmk/qmk" = "latest"
-"brew:rtk-ai/tap/rtk" = "latest"
-"brew:stripe/stripe-cli/stripe" = "latest"
-"brew:mole" = "latest"
-"brew:vitobotta/tap/hetzner_k3s" = "latest"
 # "brew-cask:airbuddy" = "latest"
 # "brew-cask:balenaetcher" = "latest"
 # "brew-cask:betterdisplay" = "latest"
@@ -147,26 +147,26 @@ login_shell = "/bin/zsh"
 
 [dotfiles]
 "~/.aliases" = "dotfiles/zsh/aliases"
+"~/.claude/CLAUDE.md" = { source = "agents/agents.md", mode = "symlink" }
+"~/.codex/AGENTS.md" = { source = "agents/agents.md", mode = "symlink" }
+"~/.config/atuin" = { source = "dotfiles/atuin", mode = "symlink-each" }
+"~/.config/ghostty" = { source = "dotfiles/ghostty", mode = "symlink-each" }
+"~/.config/lazygit" = { source = "dotfiles/lazygit", mode = "symlink-each" }
+"~/.config/mise/config.toml" = { source = ".mise/conf.d/tools.toml", mode = "symlink" }
+"~/.config/nvim" = { source = "dotfiles/nvim", mode = "symlink-each" }
+"~/.config/opencode/opencode.json" = "dotfiles/opencode/config.json"
+"~/.config/starship.toml" = "dotfiles/starship/config.toml"
+"~/.config/tmux" = { source = "dotfiles/tmux", mode = "symlink-each" }
+"~/.config/topgrade.toml" = "dotfiles/topgrade/config.toml"
+"~/.config/zellij" = { source = "dotfiles/zellij", mode = "symlink-each" }
+"~/.cursor/mcp.json" = "dotfiles/cursor/mcp.json"
 "~/.functions" = "dotfiles/zsh/functions"
 "~/.gemrc" = "dotfiles/ruby/gemrc"
 "~/.gitconfig" = "dotfiles/git/config"
 "~/.gitignore.global" = "dotfiles/git/ignore"
+"~/.pi/agent/SYSTEM.md" = { source = "agents/agents.md", mode = "symlink" }
 "~/.yamlfmt" = "dotfiles/yaml/yamlfmt"
 "~/.zshrc" = "dotfiles/zsh/zshrc"
-"~/.config/starship.toml" = "dotfiles/starship/config.toml"
-"~/.config/topgrade.toml" = "dotfiles/topgrade/config.toml"
-"~/.config/tmux" = { source = "dotfiles/tmux", mode = "symlink-each" }
-"~/.config/zellij" = { source = "dotfiles/zellij", mode = "symlink-each" }
-"~/.config/nvim" = { source = "dotfiles/nvim", mode = "symlink-each" }
-"~/.config/ghostty" = { source = "dotfiles/ghostty", mode = "symlink-each" }
-"~/.config/lazygit" = { source = "dotfiles/lazygit", mode = "symlink-each" }
-"~/.config/opencode/opencode.json" = "dotfiles/opencode/config.json"
-"~/.config/atuin" = { source = "dotfiles/atuin", mode = "symlink-each" }
-"~/.cursor/mcp.json" = "dotfiles/cursor/mcp.json"
-"~/.config/mise/config.toml" = { source = ".mise/conf.d/tools.toml", mode = "symlink" }
-"~/.claude/CLAUDE.md" = { source = "agents/agents.md", mode = "symlink" }
-"~/.codex/AGENTS.md" = { source = "agents/agents.md", mode = "symlink" }
-"~/.pi/agent/SYSTEM.md" = { source = "agents/agents.md", mode = "symlink" }
 
 [bootstrap.macos.dock]
 autohide = true
