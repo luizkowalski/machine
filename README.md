@@ -2,13 +2,34 @@
 
 ## Setup
 
-Install [mise](https://mise.jdx.dev/installing-mise.html), then clone and bootstrap the appropriate profile:
+### Fresh machine
+
+This setup targets an Apple Silicon Mac. Install the [Xcode Command Line
+Tools](https://developer.apple.com/library/archive/technotes/tn2339/_index.html)
+and finish its installer before continuing:
+
+```sh
+xcode-select --install
+```
+
+Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), standalone
+[mise](https://mise.jdx.dev/installing-mise.html), then
+[Homebrew](https://docs.brew.sh/Installation):
+
+```sh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+curl https://mise.run | sh
+export PATH="$HOME/.local/bin:$PATH"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Clone and bootstrap the appropriate profile:
 
 ```sh
 git clone https://github.com/luizkowalski/dotfiles ~/Projects/dotfiles
 cd ~/Projects/dotfiles
 mise trust
-mise -E home bootstrap # or: mise -E work bootstrap
+mise -E home bootstrap
 ```
 
 Use `home` or `work` consistently in the commands below.
@@ -97,7 +118,7 @@ mise -E home upgrade
 
 ### Existing machines
 
-Mise will not take over casks already owned by Homebrew or update dirty managed repositories. Clean those repositories and uninstall only the existing casks you want mise to own before the first bootstrap. Preview the migration first; real files left by the old Stow setup may require the one-time force flag:
+Mise will not take over casks already owned by Homebrew or update dirty managed repositories. Clean those repositories and uninstall only the existing casks you want mise to own before the first bootstrap. Preview the migration first; existing files at dotfile targets may require the one-time force flag:
 
 ```sh
 mise -E home bootstrap --dry-run --force-dotfiles

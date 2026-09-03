@@ -16,7 +16,7 @@ export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.spicetify"
 export PATH="$HOME/.opencode/bin:$PATH"
-export PATH="$HOME/.local/bin:/opt/zerobrew/prefix/bin:$PATH"
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/opt/zerobrew/prefix/bin:$PATH"
 
 DISABLE_AUTO_UPDATE="true"
 
