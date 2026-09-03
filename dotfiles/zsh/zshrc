@@ -25,6 +25,7 @@ VSCODE='cursor'
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets"
 
 plugins=(
+  ansible
   brew
   bundler
   encode64
