@@ -52,7 +52,6 @@
 "brew:ls-lint" = "latest"
 "brew:lua-language-server" = "latest"
 "brew:mas" = "latest"
-"brew:mcfly" = "latest"
 "brew:minikube" = "latest"
 "brew:mole" = "latest"
 "brew:mysql@8.4" = "latest"

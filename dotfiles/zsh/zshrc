@@ -157,13 +157,7 @@ if [[ -f $(which uv) ]]; then
   eval "$(uv generate-shell-completion zsh)"
 fi
 
-# eval "$(mcfly init zsh)"
-# eval "$(mcfly-fzf init zsh)"
-# eval "$(rbenv init - zsh)"
-# eval "$(/opt/homebrew/bin/mise activate zsh)"
 eval "$(mise activate zsh --shims)" # should be first
-# eval "$(mise activate zsh)"
-# mise's bundled zsh completion is broken (dynamic args fall back to files); use usage-generated one
 eval "$(usage g completion zsh mise --usage-cmd 'mise usage')"
 
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
