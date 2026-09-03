@@ -17,6 +17,7 @@ only = [
   "config_update",
   "github_cli_extensions",
   "go",
+  "mise",
   "node",
   "pi",
   "self_update",

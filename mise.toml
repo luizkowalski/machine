@@ -111,7 +111,7 @@
 # "brew-cask:betterdisplay" = "latest"
 # "brew-cask:claude" = "latest"
 # "brew-cask:elgato-stream-deck" = "latest"
-# "brew-cask:font-cascadia-code-nf" = "latest"
+"brew-cask:font-cascadia-code-nf" = "latest"
 # "brew-cask:font-caskaydia-cove-nerd-font" = "latest"
 # "brew-cask:font-caskaydia-mono-nerd-font" = "latest"
 # "brew-cask:font-fira-code-nerd-font" = "latest"
