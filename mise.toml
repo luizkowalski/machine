@@ -193,7 +193,6 @@ three_finger_drag = true
 
 [bootstrap.macos.defaults.NSGlobalDomain]
 "com.apple.swipescrolldirection" = false
-AppleFontSmoothing = 0
 AppleLocale = "en_DE@currency=EUR"
 AppleMeasurementUnits = "Centimeters"
 AppleMetricUnits = true
