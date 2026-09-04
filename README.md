@@ -118,7 +118,13 @@ mise -E home upgrade
 
 ### Existing machines
 
-Mise will not take over casks already owned by Homebrew or update dirty managed repositories. Clean those repositories and uninstall only the existing casks you want mise to own before the first bootstrap. Preview the migration first; existing files at dotfile targets may require the one-time force flag:
+Mise accepts Homebrew-owned casks with valid metadata and one installed version
+as installed. Homebrew keeps ownership; use `brew` to update or remove them.
+You do not need to uninstall them before bootstrap.
+
+Mise does not update dirty managed repositories. Clean those repositories
+before an update. Preview the migration first; existing files at dotfile
+targets may require the one-time force flag:
 
 ```sh
 mise -E home bootstrap --dry-run --force-dotfiles
@@ -139,13 +145,15 @@ Build and install the bulb controller with:
 mise run bulb
 ```
 
-Mise's direct Homebrew installer cannot currently install these casks:
+Mise can read tap Ruby definitions when tap API metadata is absent. It also
+supports selected cask lifecycle hooks and installer packages. See the
+[current Homebrew support](https://mise.jdx.dev/bootstrap/packages/brew.html).
+The optional casks `st0012/cctop/cctop`, `steipete/tap/codexbar`, `macfuse`,
+and `ngrok` have not been reverified with this setup. Check each cask before
+adding it; use Homebrew if mise reports an unsupported operation.
 
-- `st0012/cctop/cctop` and `steipete/tap/codexbar` do not publish tap API metadata.
-- `macfuse` and `ngrok` use unsupported cask postflight operations.
-
-Install any of them manually if needed. Mise also does not implement
-`brew services`; with Homebrew available, start the optional services with:
+Mise does not implement `brew services`; with Homebrew available, start
+the optional services with:
 
 ```sh
 brew services start libvirt

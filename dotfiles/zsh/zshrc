@@ -58,8 +58,6 @@ source "$HOME/.functions"
 eval "$(atuin init zsh --disable-up-arrow)"
 eval "$(starship init zsh)"
 
-eval "$(usage g completion zsh mise --usage-cmd 'mise usage')"
-
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

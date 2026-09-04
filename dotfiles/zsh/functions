@@ -198,36 +198,36 @@ function strit() {
 #   rm $srt_as_utf8
 # }
 
+function _gatekeeper_shell() {
+  local context="$1" pods pod
+  if [[ -z "$context" || "$context" == *$'\n'* ]]; then
+    print -u2 "Expected exactly one matching Kubernetes context."
+    return 1
+  fi
+  pods=$(kubectl --context "$context" get pods -l app=gatekeeper -o name) || return
+  pod=$(print -r -- "$pods" | grep -v deploy | head -1)
+  [[ -n "$pod" ]] || return 1
+  echo "Using context: $context"
+  echo "Connecting to pod: $pod"
+  kubectl --context "$context" exec -it "$pod" -- /bin/sh
+}
+
 function quirely() {
-  kubectl config current-context | grep -q "quirely" || kubectl config use-context $(kubectl config get-contexts -o name | grep gatekeeper | grep quirely)
-  local pod=$(kubectl get pods -l app=gatekeeper -o name | grep -v deploy | head -1 | cut -d/ -f2)
-  kubectl exec -it "$pod" -- /bin/sh
+  _gatekeeper_shell "$(kubectl config get-contexts -o name | grep gatekeeper | grep quirely)"
 }
 
 function flinklyus() {
-  kubectl config use-context $(kubectl config get-contexts -o name | grep gatekeeper | grep flinkly | grep us | head -1)
-  local pod=$(kubectl get pods -l app=gatekeeper -o name | grep -v deploy | head -1 | cut -d/ -f2)
-  kubectl exec -it "$pod" -- /bin/sh
+  _gatekeeper_shell "$(kubectl config get-contexts -o name | grep gatekeeper | grep flinkly | grep us)"
 }
 
 function flinklyeu() {
-  kubectl config use-context $(kubectl config get-contexts -o name | grep gatekeeper | grep flinkly | grep eu | head -1)
-  local pod=$(kubectl get pods -l app=gatekeeper -o name | grep -v deploy | head -1 | cut -d/ -f2)
-  kubectl exec -it "$pod" -- /bin/sh
+  _gatekeeper_shell "$(kubectl config get-contexts -o name | grep gatekeeper | grep flinkly | grep eu)"
 }
 
 function produs() {
-  kubectl config use-context $(kubectl config get-contexts -o name | grep gatekeeper | grep -v flinkly | grep -v quirely | grep us | head -1)
-  local pod=$(kubectl get pods -l app=gatekeeper -o name | grep -v deploy | head -1 | cut -d/ -f2)
-  echo "Using context: $(kubectl config current-context)"
-  echo "Connecting to pod: $pod"
-  kubectl exec -it "$pod" -- /bin/sh
+  _gatekeeper_shell "$(kubectl config get-contexts -o name | grep gatekeeper | grep -v flinkly | grep -v quirely | grep us)"
 }
 
 function prodeu() {
-  kubectl config use-context $(kubectl config get-contexts -o name | grep gatekeeper | grep -v flinkly | grep -v quirely | grep eu | head -1)
-  local pod=$(kubectl get pods -l app=gatekeeper -o name | grep -v deploy | head -1 | cut -d/ -f2)
-  echo "Using context: $(kubectl config current-context)"
-  echo "Connecting to pod: $pod"
-  kubectl exec -it "$pod" -- /bin/sh
+  _gatekeeper_shell "$(kubectl config get-contexts -o name | grep gatekeeper | grep -v flinkly | grep -v quirely | grep eu)"
 }
