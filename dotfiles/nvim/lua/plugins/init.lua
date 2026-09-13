@@ -90,6 +90,13 @@ local plugins = {
     lazy = false,
   },
   {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      opts.completion.autocomplete = false
+      return opts
+    end,
+  },
+  {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },

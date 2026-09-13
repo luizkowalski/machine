@@ -1,7 +1,6 @@
 [bootstrap.brew.taps]
 "anomalyco/tap" = "https://github.com/anomalyco/homebrew-tap.git"
 "cesarferreira/tap" = "https://github.com/cesarferreira/homebrew-tap.git"
-"rtk-ai/tap" = "https://github.com/rtk-ai/homebrew-tap.git"
 
 [bootstrap.packages]
 "brew:act" = "latest"
@@ -53,7 +52,6 @@
 "brew:pkgconf" = "latest"
 "brew:readline" = "latest"
 "brew:ripgrep" = "latest"
-"brew:rtk-ai/tap/rtk" = "latest"
 "brew:shellcheck" = "latest"
 "brew:shellharden" = "latest"
 "brew:sqlite" = "latest"
