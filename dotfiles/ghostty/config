@@ -5,6 +5,8 @@ auto-update = download
 
 clipboard-paste-protection = true
 
+middle-click-action = clipboard-paste
+
 cursor-style = bar
 cursor-style-blink = false
 
