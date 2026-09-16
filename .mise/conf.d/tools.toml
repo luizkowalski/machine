@@ -11,6 +11,7 @@ uv = "latest"
 
 [settings]
 experimental = true
+minimum_release_age = "12h"
 idiomatic_version_file_enable_tools = ["ruby", "bun"]
 
 [settings.ruby]

@@ -113,9 +113,9 @@ function dev() {
   fi
 }
 
-function devx(){
-  npx @devcontainers/cli "$1" --workspace-folder . "${@:2}"
-}
+function devx() {
+    npx @devcontainers/cli@latest "$@"
+  }
 
 function drspec() {
   make build-test
