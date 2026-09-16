@@ -18,7 +18,7 @@ export PATH="$PATH:$HOME/.spicetify"
 export PATH="$HOME/.opencode/bin:$PATH"
 export PATH="$HOME/.local/bin:/opt/homebrew/bin:/opt/zerobrew/prefix/bin:$PATH"
 
-DISABLE_AUTO_UPDATE="true"
+export BUNDLE_DEFAULT_CLI_COMMAND="install"
 
 VSCODE='code'
 
