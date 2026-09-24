@@ -2,7 +2,6 @@
 bun = "latest"
 go = "latest"
 node = "24.17.0"
-# node = "24"
 python = "3.14"
 ruby = "latest"
 rust = "latest"
@@ -12,7 +11,7 @@ uv = "latest"
 [settings]
 experimental = true
 minimum_release_age = "12h"
-idiomatic_version_file_enable_tools = ["ruby", "bun"]
+idiomatic_version_file_enable_tools = ["ruby", "bun", "node", "python"]
 
 [settings.ruby]
 compile = false

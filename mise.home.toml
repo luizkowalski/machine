@@ -25,7 +25,6 @@
 "brew:wb32-dfu-updater_cli" = "latest"
 "brew-cask:hot" = "latest"
 "brew-cask:imageoptim" = "latest"
-"brew-cask:launchos" = "latest"
 "brew-cask:nvidia-geforce-now" = "latest"
 "brew-cask:omnidisksweeper" = "latest"
 "brew-cask:qmk-toolbox" = "latest"

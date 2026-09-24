@@ -21,6 +21,7 @@
 "brew:coreutils" = "latest"
 "brew:difftastic" = "latest"
 "brew:dua-cli" = "latest"
+"brew:erlang" = "latest"
 "brew:ffmpeg" = "latest"
 "brew:fzf" = "latest"
 "brew:gdbm" = "latest"
