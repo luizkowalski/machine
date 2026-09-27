@@ -5,6 +5,10 @@
     - stick to ASD-STE100 for simple english
     - explain the what and why this change is being introduced
     - don't say "it makes it faster", prove with numbers (e.g. 30% less allocations)
+    - keep it short: sections Description, Changes, Notes; try to keep it under 200 words
+    - talk like a human:
+      -- prefer e.g. "I added a new feature that allows...because..." instead "* Adds new feature"
+    - describe the change for a reviewer; leave out how it was debugged or which files changed
 * Use the library or framework. Do not reimplement what it already does
 * Stick to YAGNI principles
 * Write the simplest code that does the whole job. Extract when the same shape repeats, not in anticipation
