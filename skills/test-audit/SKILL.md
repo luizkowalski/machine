@@ -1,6 +1,6 @@
 ---
 name: test-audit
-description: "Invoke whenever writing, changing, reviewing, or sweeping tests. Authoring gate for new tests plus audit workflow for low-value, implementation-coupled, or duplicative tests and the test-only production seams they demand."
+description: "Use when writing, changing, reviewing, or auditing tests, especially when deciding whether coverage protects behavior or couples to implementation."
 ---
 
 # Test Audit
@@ -72,15 +72,15 @@ not automatically deletable; the authoring gate still rejects new ones.
 
 Before judging a candidate, read the complete test and production owner, its entry point, callers, callees, sibling implementations, overlapping tests, CI
 routing, and relevant history.
-Read root and scoped `AGENTS.md` files first.
+Read root and scoped project or agent instruction files first.
 When the test claims dependency-backed behavior, inspect the dependency source or types directly.
 
 ## Discovery
 
 Keep discovery read-only and report evidence before editing. For broad scope, run parallel discovery lanes when available:
 
-- core and packages (`src/`, `packages/`);
-- plugins (`extensions/`);
+- core application code and packages;
+- plugins, integrations, and extensions;
 - UI, apps, scripts, and tooling;
 - a cross-cutting pattern sweep.
 
@@ -129,27 +129,28 @@ to increase deletion counts.
 
 ## Validation
 
-Never edit source or tests while Vitest is running in the checkout. Follow
-`$openclaw-testing`; route heavy proof through its `$crabbox` rules.
+Never edit source or tests while the project's test process is running in the
+checkout. First identify the project's documented test runner, formatter,
+changed-file gate, and required review checks. Do not assume a tool, command,
+path, or CI workflow; inspect project instructions, task configuration, and CI
+when needed.
 
-1. Run the smallest owner and sibling tests with
-   `node scripts/run-vitest.mjs <path-or-filter>`.
+1. Use the project's test runner to run the smallest owner and sibling tests.
 2. For removed source greps or plan assertions, run the executable script or
    dry-run that owns the real contract.
-3. Run targeted formatting, then `git diff --check`.
-4. Classify with
-   `node scripts/check-changed.mjs --dry-run -- <changed-paths>`, then run the
-   actual changed gate required by repository policy.
-5. Inspect `git diff --numstat`; report production/tooling separately from
-   tests and test support.
-6. After final audit edits, run mandatory `$autoreview`.
+3. Run targeted formatting and the project's diff or whitespace check.
+4. Run the project's changed-file or CI classification gate, if one exists,
+   then run the actual changed gate required by project policy.
+5. Inspect the final diff and report production/tooling separately from tests
+   and test support.
+6. After final audit edits, run the project's required review or quality gate.
 
-## Landing and continuation
+## Landing and continuations
 
-Commit, push, open a PR, or land only when authorized. Use
-`$openclaw-pr-maintainer` and the repository `scripts/pr` flow. Land one
-coherent PR at a time; after landing, refresh from current `main` and rerun
-read-only discovery for the next high-confidence batch.
+Commit, submit, merge, or land only when authorized. Follow the project's
+contribution and release process. Land one coherent change at a time; after
+landing, refresh from the current integration branch and rerun read-only
+discovery for the next high-confidence batch.
 
 ## Handoff
 
@@ -160,5 +161,5 @@ Report:
 - retained false positives and why they remain valuable;
 - focused and full proof actually run;
 - production versus test LOC;
-- PR and merge state;
+- change-request and merge state;
 - named follow-ups.

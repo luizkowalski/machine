@@ -127,10 +127,10 @@ login_shell = "/bin/zsh"
 "~/.pi/agent/SYSTEM.md" = { source = "agents/agents.md", mode = "symlink" }
 "~/.codex/AGENTS.md" = { source = "agents/agents.md", mode = "symlink" }
 "~/.cursor/AGENTS.md" = { source = "agents/agents.md", mode = "symlink" }
-"~/.claude/skills" = { source = "skills", mode = "symlink-each" }
-"~/.pi/agent/skills" = { source = "skills", mode = "symlink-each" }
-"~/.cursor/skills" = { source = "skills", mode = "symlink-each" }
-"~/.agents/skills" = { source = "skills", mode = "symlink-each" }
+"~/.claude/skills" = { source = "skills", mode = "copy" }
+"~/.pi/agent/skills" = { source = "skills", mode = "copy" }
+"~/.cursor/skills" = { source = "skills", mode = "copy" }
+"~/.agents/skills" = { source = "skills", mode = "copy" }
 
 [bootstrap.macos.dock]
 autohide = true
@@ -191,8 +191,8 @@ run = "scripts/install_ssh_keys"
 run = "scripts/build_bulb.sh"
 
 [tasks.sync-skills]
-description = "Link skills/ into the agent skill directories"
-run = "mise dot apply --yes ~/.agents/skills ~/.claude/skills ~/.pi/agent/skills"
+description = "Sync skills/ into the agent skill directories"
+run = "mise dot apply --yes ~/.agents/skills ~/.claude/skills ~/.pi/agent/skills ~/.cursor/skills"
 sources = ["skills/**"]
 
 [[watch_files]]
