@@ -60,6 +60,10 @@ Run the complete setup, including the macOS task:
 mise -E home bootstrap
 ```
 
+The macOS task enables Touch ID for `sudo` in Ghostty and other terminals.
+It may ask for your Mac password on the first run. The setting survives
+macOS updates, and repeated runs preserve existing sudo rules.
+
 Refresh package metadata and managed repositories while converging:
 
 ```sh
