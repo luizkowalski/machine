@@ -38,7 +38,6 @@ gbb = "git branch | grep -v '^\\*' | fzf --height=20% --reverse --info=inline | 
 gcupdate = "git commit -am '(chore) updates'"
 gdd = "git branch | grep -v '^\\*' | fzf --height=20% --reverse --info=inline | xargs git branch -D"
 gg = "lazygit"
-hla = "haml-lint -A"
 kd = "kamal deploy"
 merge_main = "git fetch origin && git merge origin/main"
 merge_master = "git fetch origin && git merge origin/master"
@@ -53,4 +52,3 @@ reboot_network = "sudo ifconfig en0 down && sleep 5 && sudo ifconfig en0 up; flu
 sp = "spotify_player"
 t = "bundle exec rake test"
 tg = "topgrade"
-zshconfig = "code ~/.zshrc"
