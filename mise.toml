@@ -105,7 +105,6 @@ login_shell = "/bin/zsh"
 "~/.oh-my-zsh/custom/plugins/fzf-tab" = { url = "https://github.com/Aloxaf/fzf-tab" }
 
 [dotfiles]
-"~/.aliases" = "dotfiles/zsh/aliases"
 "~/.config/atuin" = { source = "dotfiles/atuin", mode = "symlink-each" }
 "~/.config/ghostty" = { source = "dotfiles/ghostty", mode = "symlink-each" }
 "~/.config/lazygit" = { source = "dotfiles/lazygit", mode = "symlink-each" }

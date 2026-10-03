@@ -20,7 +20,6 @@ vim.filetype.add({
   pattern = {
     ["Dockerfile*"] = "dockerfile",
     ["Brewfile"] = "ruby",
-    [".aliases"] = "bash",
     [".functions"] = "bash",
   },
 })

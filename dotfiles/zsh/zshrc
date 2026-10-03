@@ -54,7 +54,6 @@ if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
 
-source "$HOME/.aliases"
 source "$HOME/.functions"
 
 eval "$(atuin init zsh --disable-up-arrow)"
