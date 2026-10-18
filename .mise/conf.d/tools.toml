@@ -10,7 +10,7 @@ uv = "latest"
 
 [settings]
 experimental = true
-minimum_release_age = "12h"
+minimum_release_age = "1h"
 idiomatic_version_file_enable_tools = ["ruby", "bun", "node", "python"]
 
 [settings.ruby]
