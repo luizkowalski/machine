@@ -1,7 +1,7 @@
 git:
   diffRenderers:
-    - type: extDiff
-      command: difft --color=always --display=inline
+    - type: rawGit
+      args: [--diff-algorithm=histogram]
 os:
   editPreset: "cursor"
 promptToReturnFromSubprocess: false # removes "press enter to return to lazygit" popup
