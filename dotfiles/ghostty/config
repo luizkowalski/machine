@@ -13,7 +13,7 @@ cursor-style-blink = true
 copy-on-select = clipboard
 
 #font-family = Ioskeley Mono Term Light
-font-family = AtkynsonMono NFM Light
+font-family = GoogleSansCode NFM Light
 font-style = Light
 adjust-cell-width = -1
 font-size = 15
