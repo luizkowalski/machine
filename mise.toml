@@ -127,7 +127,6 @@ login_shell = "/bin/zsh"
 "~/.codex/AGENTS.md" = { source = "agents/agents.md", mode = "symlink" }
 "~/.cursor/AGENTS.md" = { source = "agents/agents.md", mode = "symlink" }
 "~/.claude/skills" = { source = "skills", mode = "copy" }
-"~/.pi/agent/skills" = { source = "skills", mode = "copy" }
 "~/.cursor/skills" = { source = "skills", mode = "copy" }
 "~/.agents/skills" = { source = "skills", mode = "copy" }
 
