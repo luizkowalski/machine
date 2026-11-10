@@ -38,6 +38,7 @@ gbb = "git branch | grep -v '^\\*' | fzf --height=20% --reverse --info=inline | 
 gcupdate = "git commit -am '(chore) updates'"
 gdd = "git branch | grep -v '^\\*' | fzf --height=20% --reverse --info=inline | xargs git branch -D"
 gg = "lazygit"
+gpm = "git push --mirror"
 kd = "kamal deploy"
 merge_main = "git fetch origin && git merge origin/main"
 merge_master = "git fetch origin && git merge origin/master"
