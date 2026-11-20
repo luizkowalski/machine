@@ -33,3 +33,7 @@
 * Name the test after the behavior. One behavior per test
 * Do not test the framework, generated types, or private methods
 * Follow the repo's runner and style
+
+# graphify
+- **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
+When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
