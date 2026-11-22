@@ -107,7 +107,7 @@ login_shell = "/bin/zsh"
 [dotfiles]
 "~/.config/atuin" = { source = "dotfiles/atuin", mode = "symlink-each" }
 "~/.config/ghostty" = { source = "dotfiles/ghostty", mode = "symlink-each" }
-"~/.config/lazygit" = { source = "dotfiles/lazygit", mode = "symlink-each" }
+"~/Library/Application Support/lazygit" = { source = "dotfiles/lazygit", mode = "symlink-each" }
 "~/.config/mise/config.toml" = { source = ".mise/conf.d/tools.toml", mode = "symlink" }
 "~/.config/nvim" = { source = "dotfiles/nvim", mode = "symlink-each" }
 "~/.config/opencode/opencode.json" = "dotfiles/opencode/config.json"

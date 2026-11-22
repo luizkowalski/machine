@@ -1,7 +1,9 @@
 git:
   diffRenderers:
-    - type: rawGit
-      args: [--diff-algorithm=histogram]
+    # - type: rawGit
+    #   args: [--diff-algorithm=histogram]
+    - type: extDiff
+      command: "omnidiff --context {{diffContext}} --width {{width}} --layout auto"
 os:
   editPreset: "cursor"
 promptToReturnFromSubprocess: false # removes "press enter to return to lazygit" popup
